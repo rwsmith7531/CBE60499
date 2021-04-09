@@ -1,0 +1,21 @@
+
+SR1
+
+x is array of N by 1 vectors
+
+B is array of N by N matrices
+
+k = 0 # initialize iteration counter k
+x[k] = x0 # store starting point x0 to iteration history of x
+B[k] = identity_matrix
+
+while B is not singular and max_iterations is not exceeded:
+	f[k] = f(x[k]) # Evaluate f(x) at current iteration
+	grad[k] = gradient(x[k]) # evaluate gradient
+	check_nan(grad[k]) # ensure gradient isn't NaN before proceeding
+	if k > 0 then:
+		step = x[k] - x[k-1] # set delta_x step
+		y = grad[k] - grad[k-1] # set change in gradient of f as y
+		
+
+
